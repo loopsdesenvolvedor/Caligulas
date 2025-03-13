@@ -9,7 +9,7 @@ export const theme = {
     text: "#fff",
     textLightWhite: "rgba(255,255,255,.8)",
     textLightBlack: "rgba(51,51,51,.8)",
-    border: "rgba(255,255,255,.05)",
+    border: "rgba(255,255,255,.04)",
   },
   fonts: {
     body: "'Poppins', sans-serif",
