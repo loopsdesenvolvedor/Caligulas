@@ -5,6 +5,8 @@ import StyledComponentsRegistry from "@/lib/registry";
 import GlobalStyle from "@/styles/GlobalStyle";
 import ThemeProvider from "@/providers/ThemeProvider";
 
+import ReduxProvider from "@/providers/ReduxProvider";
+
 import Header from "@/components/header";
 
 const inter = Inter({
@@ -30,9 +32,11 @@ export default function RootLayout({
       <body className={`${inter.variable} `}>
         <StyledComponentsRegistry>
           <ThemeProvider>
-            <GlobalStyle />
-            <Header />
-            {children}
+            <ReduxProvider>
+              <GlobalStyle />
+              <Header />
+              {children}
+            </ReduxProvider>
           </ThemeProvider>
         </StyledComponentsRegistry>
       </body>
