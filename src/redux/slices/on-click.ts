@@ -1,14 +1,16 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState = {
-  click: false,
+  menuOpen: false,
 };
 
 const clickSlice = createSlice({
   name: "click",
   initialState,
   reducers: {
-    toggleClick: (state) => ({ ...state, click: !state.click }),
+    toggleClick: (state) => {
+      state.menuOpen = !state.menuOpen;
+    },
   },
 });
 
