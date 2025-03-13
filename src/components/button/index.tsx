@@ -1,9 +1,9 @@
 import { ButtonType } from "@/@types/Button";
 
-const Button = ({ type, text, icon }: ButtonType) => {
+const Button = ({ type, text, icon, onClick }: ButtonType) => {
   return (
     <>
-      <button type={type}>
+      <button type={type} onClick={onClick}>
         {icon}
         {text}
       </button>

@@ -17,6 +17,51 @@ export const Header = styled.header`
   }
 `;
 
+export const Form = styled.form`
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  input {
+    display: flex;
+    height: 3.8rem;
+    width: 100%;
+    background-color: ${({ theme }) => theme.colors.background};
+    border: 1px solid ${({ theme }) => theme.colors.border};
+    padding-left: 1rem;
+    outline: none;
+    border-radius: 4px;
+    color: ${({ theme }) => theme.colors.text};
+  }
+
+  button {
+    width: 12rem;
+    height: 3.8rem;
+    border-radius: 4px;
+  }
+
+  & [type="submit"] {
+    background-color: transparent;
+    border: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    position: absolute;
+    right: 12rem;
+
+    ${breakAt("sm")} {
+      display: none;
+    }
+  }
+  & [type="button"] {
+    color: ${({ theme }) => theme.colors.text};
+    background-color: ${({ theme }) => theme.colors.backgroundBlack80};
+    border: 1px solid ${({ theme }) => theme.colors.backgroundBlack80};
+  }
+`;
+
 export const ContentLeft = styled.div`
   max-width: 15.6rem;
   display: flex;
@@ -66,8 +111,8 @@ export const ContentRight = styled.div`
     cursor: pointer;
     color: ${({ theme }) => theme.colors.text};
     border-radius: 3rem;
-    background-color: #212121;
-    border: ${({ theme }) => theme.colors.backgroundHover};
+    background-color: ${({ theme }) => theme.colors.backgroundBlack80};
+    border: 1px solid ${({ theme }) => theme.colors.backgroundBlack80};
 
     &:hover {
       background-color: ${({ theme }) => theme.colors.red};
