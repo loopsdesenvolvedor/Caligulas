@@ -5,6 +5,8 @@ import StyledComponentsRegistry from "@/lib/registry";
 import GlobalStyle from "@/styles/GlobalStyle";
 import ThemeProvider from "@/providers/ThemeProvider";
 
+import Header from "@/components/header";
+
 const inter = Inter({
   variable: "--font-inter-sans",
   subsets: ["latin"],
@@ -24,11 +26,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={`${inter.variable} `}>
         <StyledComponentsRegistry>
           <ThemeProvider>
             <GlobalStyle />
+            <Header />
             {children}
           </ThemeProvider>
         </StyledComponentsRegistry>
