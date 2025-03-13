@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import Container from "../container";
+import Button from "../button";
 
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { IoMdAlert } from "react-icons/io";
@@ -16,9 +17,11 @@ const Header = () => {
     <S.Header>
       <Container>
         <S.ContentLeft>
-          <button type="button">
-            <HiOutlineMenuAlt4 color="#fff" size={30} />
-          </button>
+          <Button
+            type="button"
+            icon={<HiOutlineMenuAlt4 color="#fff" size={26} />}
+          />
+
           <Link href="/">
             <Image
               src={logo}
@@ -31,13 +34,12 @@ const Header = () => {
           </Link>
         </S.ContentLeft>
         <S.ContentRight>
-          <button type="button">
-            <FiSearch color="#fff" size={16} />
-          </button>
-          <button type="button">
-            <IoMdAlert color="#fff" size={16} />
-            <span>Entrar</span>
-          </button>
+          <Button type="button" icon={<FiSearch color="#fff" size={16} />} />
+          <Button
+            type="button"
+            icon={<IoMdAlert color="#fff" size={16} />}
+            text="Entrar"
+          />
         </S.ContentRight>
       </Container>
     </S.Header>
