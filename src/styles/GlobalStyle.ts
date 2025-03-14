@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
    html {
-     font-family: 'Poppins', sans-serif;
+     font-family: 'Inter', sans-serif;
      font-size: 62.5%;
      font-weight: 300;
      box-sizing: border-box;
@@ -25,6 +25,6 @@ const GlobalStyle = createGlobalStyle`
      -moz-osx-font-smoothing: grayscale;
      font-feature-settings: 'liga' 1;
    }
-`
+`;
 
 export default GlobalStyle;
