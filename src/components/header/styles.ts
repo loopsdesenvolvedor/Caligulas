@@ -15,14 +15,16 @@ export const Header = styled.header`
     justify-content: space-between;
     align-items: center;
 
-    form {
+    .form-desktop {
       display: none;
     }
 
     ${breakAt("sm")} {
       height: 8rem;
-
-      form {
+      .form-mobile {
+        display: none;
+      }
+      .form-desktop {
         display: flex;
       }
     }
@@ -72,6 +74,7 @@ export const Form = styled.form`
     color: ${({ theme }) => theme.colors.text};
     background-color: ${({ theme }) => theme.colors.backgroundBlack80};
     border: 1px solid ${({ theme }) => theme.colors.backgroundBlack80};
+    font-size: 1.4rem;
   }
 
   ${breakAt("sm")} {
