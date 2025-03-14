@@ -4,6 +4,7 @@ import * as S from "./styles";
 
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 import { RootState } from "@/redux/store";
 import { useDispatch, useSelector } from "react-redux";
@@ -23,13 +24,33 @@ const Header = () => {
   const dispatch = useDispatch();
   const clicked = useSelector((state: RootState) => state.click.menuOpen);
 
+  const [isSearchFormVisible, setIsSearchFormVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const checkScreenSize = () => {
+    const isMobileScreen = window.innerWidth <= 768;
+    setIsMobile(isMobileScreen);
+
+    if (isMobileScreen) {
+      setIsSearchFormVisible(true);
+    }
+  };
+
+  useEffect(() => {
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  });
+
   return (
     <S.Header>
-      {clicked ? (
+      {clicked && isMobile && isSearchFormVisible ? (
         <Container>
-          <S.Form action="">
+          <S.Form className="form-mobile" action="">
             <Input type="text" placeholder="Faça sua busca..." />
-
             <Button type="submit" icon={<FiSearch size={14} color="#fff" />} />
             <Button
               type="button"
@@ -59,7 +80,7 @@ const Header = () => {
               />
             </Link>
           </S.ContentLeft>
-          <S.Form>
+          <S.Form className="form-desktop">
             <Input type="text" placeholder="Faça sua busca..." />
             <Button type="submit" icon={<FiSearch size={14} color="#fff" />} />
           </S.Form>
