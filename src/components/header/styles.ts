@@ -14,6 +14,18 @@ export const Header = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    form {
+      display: none;
+    }
+
+    ${breakAt("sm")} {
+      height: 8rem;
+
+      form {
+        display: flex;
+      }
+    }
   }
 `;
 
@@ -41,6 +53,7 @@ export const Form = styled.form`
     width: 12rem;
     height: 3.8rem;
     border-radius: 4px;
+    cursor: pointer;
   }
 
   & [type="submit"] {
@@ -52,13 +65,23 @@ export const Form = styled.form`
     right: 12rem;
 
     ${breakAt("sm")} {
-      display: none;
+      right: 1.8rem;
     }
   }
   & [type="button"] {
     color: ${({ theme }) => theme.colors.text};
     background-color: ${({ theme }) => theme.colors.backgroundBlack80};
     border: 1px solid ${({ theme }) => theme.colors.backgroundBlack80};
+  }
+
+  ${breakAt("sm")} {
+    max-width: 34.8rem;
+    height: 3.2rem;
+
+    input {
+      border-radius: 30px;
+      padding-left: 1.8rem;
+    }
   }
 `;
 

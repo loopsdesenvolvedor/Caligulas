@@ -59,6 +59,10 @@ const Header = () => {
               />
             </Link>
           </S.ContentLeft>
+          <S.Form>
+            <Input type="text" placeholder="Faça sua busca..." />
+            <Button type="submit" icon={<FiSearch size={14} color="#fff" />} />
+          </S.Form>
           <S.ContentRight>
             <Button
               type="button"
