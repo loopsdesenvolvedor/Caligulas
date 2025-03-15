@@ -2,6 +2,7 @@ import Container from "@/components/container";
 import Grid from "@/components/grid";
 import Title from "@/components/title";
 import CardVideo from "@/components/card-video";
+import Pagination from "@/components/pagination";
 
 import imageTest from "@/assets/test.jpg";
 
@@ -27,7 +28,36 @@ const Home = () => {
             rating="65%"
             author="LoopsAmd"
           />
+          <CardVideo
+            image={imageTest}
+            title="Comi minha patroa  Francus em quanto o patrão viajava e olha só que show de bunda ela"
+            views="200k"
+            rating="65%"
+            author="LoopsAmd"
+          />
+          <CardVideo
+            image={imageTest}
+            title="Comi minha patroa  Francus em quanto o patrão viajava e olha só que show de bunda ela"
+            views="200k"
+            rating="65%"
+            author="LoopsAmd"
+          />
+          <CardVideo
+            image={imageTest}
+            title="Comi minha patroa  Francus em quanto o patrão viajava e olha só que show de bunda ela"
+            views="200k"
+            rating="65%"
+            author="LoopsAmd"
+          />
+          <CardVideo
+            image={imageTest}
+            title="Comi minha patroa  Francus em quanto o patrão viajava e olha só que show de bunda ela"
+            views="200k"
+            rating="65%"
+            author="LoopsAmd"
+          />
         </Grid>
+        <Pagination />
       </Container>
     </main>
   );
