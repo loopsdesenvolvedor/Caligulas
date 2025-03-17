@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
    body{
      margin: 0;
      padding: 0;
-     background-color: #12191F;
+     background-color: ${({ theme }) => theme.colors.background};
      color: #fff;
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
