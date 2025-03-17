@@ -111,7 +111,6 @@ export const ContentCopyright = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid ${({ theme }) => theme.colors.border};
 
   span {
     font-size: 1.4rem;
