@@ -9,7 +9,7 @@ const Grid = styled.div<GridType>`
   height: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 1.2rem;
+  grid-gap: 1.6rem;
 
   ${breakAt("sm")} {
     grid-template-columns: repeat(${(props) => props.$sm}, 1fr);
