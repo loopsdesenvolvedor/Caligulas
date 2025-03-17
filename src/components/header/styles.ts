@@ -134,6 +134,7 @@ export const ContentRight = styled.div`
     width: 8rem;
     height: 3.6rem;
     gap: 0.8rem;
+    margin-left: auto;
     cursor: pointer;
     color: ${({ theme }) => theme.colors.text};
     border-radius: 3rem;
