@@ -5,6 +5,7 @@ import CardVideo from "@/components/card-video";
 import Pagination from "@/components/pagination";
 
 import imageTest from "@/assets/test.jpg";
+import Footer from "@/components/footer";
 
 const Home = () => {
   return (
@@ -58,6 +59,7 @@ const Home = () => {
           />
         </Grid>
         <Pagination />
+        <Footer />
       </Container>
     </main>
   );
