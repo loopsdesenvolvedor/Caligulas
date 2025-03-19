@@ -69,7 +69,7 @@ const Footer = () => {
         <span>
           @2025 - caligulas.com.br -
           <Link href={`/`}> Política de Privacidade</Link> e
-          <Link href={`/`}>Termos de Uso</Link>
+          <Link href={`/`}> Termos de Uso</Link>
         </span>
       </S.ContentCopyright>
     </S.Footer>

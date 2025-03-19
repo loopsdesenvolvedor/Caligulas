@@ -113,7 +113,7 @@ export const ContentCopyright = styled.div`
   align-items: center;
 
   span {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: ${({ theme }) => theme.colors.text};
     text-align: center;
     opacity: 0.6;
@@ -127,6 +127,8 @@ export const ContentCopyright = styled.div`
   }
 
   ${breakAt("sm")} {
+    border-top: 1px solid ${({ theme }) => theme.colors.border};
+
     margin-top: 2.4rem;
   }
 `;
